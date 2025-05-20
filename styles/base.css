@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mukta', sans-serif;
+}
+
+/* Corpo da página */
+body, html {
+  height: 100%;
+  background-color: #1b2a16; /* verde escuro */
+  color: #EDF1F7; /* texto claro */
+  overflow-x: hidden;
+}
+
+/* Vídeo de fundo */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+/* Container principal */
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+header img {
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Menu de navegação */
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navigation li {
+  font-weight: 600;
+}
+
+.navigationL {
+  color: #EDF1F7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navigationL:hover {
+  color: #a3d977; /* verde claro */
+}
+
+/* Ícones das redes sociais */
+.socialmedia svg {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.socialmedia svg:hover path {
+  fill: #a3d977; /* verde claro */
+}
+
+/* Main */
+main {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.imagem1 {
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Informações principais */
+.maininfo { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #dce3db;
+}
+
+
+/* Botões */
+.doc-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.doc-button {
+  display: inline-block;
+  margin: 0;
+
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1b2a16;
+  background-color: #a3d977;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.doc-button:hover {
+  background-color: #8bc34a;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .maininfo {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  .socialmedia {
+    margin-top: 10px;
+  }
+}
